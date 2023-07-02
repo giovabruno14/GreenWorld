@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Márgenes</h1>
+    </header>
+    
+    <div class="container">
+        <div class="row borde">
+            <div class="col-12 fondo6">
+                <p>Cuando las cajas no suman 12 el espacio sobrante (notar que no es offset sino espacio que no se ocupó ni con contenido, ni con offset) se puede distribuir con la clase <strong>m</strong> que ajusta el margen de la caja en los 4 costados.</p>
+
+                <p>También hay clases que agregan, a la letra m, otra letra que indica dónde se aplica el margen: <strong>t, e, b, s</strong> (top, (end) right, bottom, (start) left), o las letras <strong>x</strong> (izquierda y derecha, eje horizontal) e <strong>y</strong> (arriba y abajo, eje vertical); luego el tamaño del viewport desde donde se aplica el margen y, por último, la cantidad a aplicar con el siguiente formato: 0 (sin margen), 1 (0.25rem), 2 (0.5rem), 3 (1rem), 4 (1.5rem), 5 (3rem) y auto (maneja el espacio sobrante de distintas maneras).</p>
+            </div>
+
+            <div class="col-md-4 fondo2">
+                <p>col-md-4</p>
+            </div>
+
+            <div class="col-md-4 ms-md-auto fondo3">
+                <p>col-md-4 ms-md-auto, todo el espacio sobrante se aplica a la izquierda de esta caja a partir de pantallas md.</p>
+            </div>
+        </div>
+        
+        <div class="row borde">
+            <div class="col-md-4 me-md-auto fondo2">
+                <p>col-md-4 me-md-auto, todo el espacio sobrante se aplica a la derecha de esta caja a partir de pantallas md.</p>
+            </div>
+
+            <div class="col-md-4 fondo3">
+                <p>col-md-4</p>
+            </div>
+        </div>
+        
+        <div class="row borde">
+            <div class="col-md-4 me-md-3 fondo2">
+                <p>col-md-4 me-md-3, margen derecho de 1rem a partir de pantallas md.</p>
+            </div>
+
+            <div class="col-md-4 me-1 fondo3">
+                <p>col-md-4 me-1, margen derecho de 0.25rem en todos los tamaños (al no incluir un sufijo de medio se aplica desde xs).</p>
+            </div>
+
+            <div class="col-md fondo6">
+                <p>col-md, relleno automático.</p>
+            </div>
+        </div>
+        
+        <div class="row borde">
+            <div class="col-md-4 ms-md-2 fondo2">
+                <p>col-md-4 ms-md-2, margen izquierdo de 0.5rem a partir de pantallas md.</p>
+            </div>
+
+            <div class="col-md-4 ms-md-5 fondo3">
+                <p>col-md-4 ms-md-5, margen izquierdo de 3rem a partir de pantallas md.</p>
+            </div>
+
+            <div class="col-md fondo6">
+                <p>col-md, relleno automático.</p>
+            </div>
+        </div>
+        
+        <div class="row borde">
+            <div class="col-md mt-md-4 fondo2">
+                <p>col-md mt-md-4, margen superior de 1.5rem a partir de pantallas md.</p>
+            </div>
+
+            <div class="col-md mb-lg-3 fondo3">
+                <p>col-md mb-lg-3, margen inferior de 1rem a partir de pantallas lg.</p>
+            </div>
+        </div>
+        
+        <div class="row borde">
+            <div class="col-md-4 mx-md-auto fondo2">
+                <p>col-md-4 mx-md-auto, reparte el espacio sobrante a ambos lados horizontales de la caja en partes iguales a partir de pantallas md.</p>
+            </div>
+
+            <div class="col-md-4 fondo3">
+                <p>col-md-4</p>
+            </div>
+        </div>
+        
+        <!-- Para ver el valor auto en el eje vertical agrandamos el alto del row con la clase alto-->
+        
+        <div class="row borde alto">
+            <div class="col-md-4 my-md-auto fondo2">
+                <p>col-md-4 my-md-auto, reparte, en partes iguales, el espacio sobrante por debajo de la caja (generado por el alto del row o por el alto de otra col con mayor contenido) arriba y abajo a partir de pantallas md.</p>
+            </div>
+
+            <div class="col-md-4 fondo3">
+                <p>col-md-4</p>
+            </div>
+        </div>
+
+        <div class="row borde alto">
+            <div class="col-md-4 m-md-3 fondo2">
+                <p>col-md-4 m-md-3, margen de 1rem en los 4 costados de la caja a partir de pantallas md.</p>
+            </div>
+
+            <div class="col-md-4 my-md-3 fondo3">
+                <p>col-md-4 my-md-3, margen de 1rem a ambos lados verticales de la caja a partir de pantallas md.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

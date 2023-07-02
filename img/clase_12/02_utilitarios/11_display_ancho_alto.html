@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Mostrar / ocultar elementos</h1>
+    </header>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg fondo1">
+                <p>Tenemos clases que nos permiten alterar el valor de la propiedad display del elemento. Generalmente se los utiliza para mostrar u ocultar elementos en todos los tamaños de viewport o solo en alguno de ellos.</p> 
+                
+                <p>Pero en realidad, también permiten modificar la forma como actúan, ya que tenemos una clase para cada tipo de valor de la propiedad CSS display, siempre con la nombreclatura de clase <strong>[propiedad]-[tamaño]-[valor]</strong>:</p>
+
+                <ul>
+                    <li>d-none</li>
+                    <li>d-block</li>
+                    <li>d-inline</li>
+                    <li>d-inline-block</li>
+                </ul>
+
+                <p>También existen clases que incluyen el tamaño de viewport a partir del cual queremos que se aplique (de allí en adelante como siempre), por ejemplo: d-md-none, d-lg-block, etc.</p>
+            </div>
+
+            <div class="col-lg fondo2">
+                <h2>Párrafo visible solo en md</h2>
+
+                <p class="d-none d-md-block d-lg-none">Se muestra solo en md: d-none (afecta a todos los tamaños ya que no se indica el medio lo que implica xs) y d-md-block (de aplica desde md) d-lg-none (para pisar a md y que desde lg en adelante no se muestre).</p>
+            </div>
+
+            <div class="col-lg fondo3">
+                <h2>Párrafo oculto solo en xs</h2>
+
+                <p class="d-none d-sm-block">Como debemos ocultarlo solo en xs le aplicamos la clase d-none que actúa desde xs en adelante (todos los medios) que será pisada por la clase d-sm-block para que se muestre en bloque desde sm en adelante.</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md fondo4">
+                <h2>Párrafos en inline-block desde lg y con w-50</h2>
+
+                <p>Para poder visualizar el efecto de estas clases se aplica también la clase <strong>w-*</strong> que aplica y determina el ancho (width) del elemento en porcentaje (si no tienen un ancho menor al 100% por más que trabajen inline-block no los veremos en línea).</p> 
+                    
+                <p>Hay 5 clases w-*: w-25, w-50, w-75, w-100 y w-auto (los números son el % de ancho que ocupan con respecto a su contenedor y auto es el ancho automático del contenido).</p> 
+                
+                <p>Cuando los párrafos se encuentran uno al lado del otro es porque están trabajando inline-block (lg y xl) y cuando están uno debajo del otro es porque están trabajando en bloque (por default).</p> 
+                
+                <p>Notar que los párrafos están unidos por medio de un comentario html para que no dejen el espacio por default entre ellos que impidan que entren uno al lado del otro ya que ambos tienen aplicado un ancho del 50%.</p>
+
+                <p>También existen las clases mw-100, que ajusta un max-width de 100%; vw-100 y min-vw-100, que ajustan un ancho de 100vw y un min-width de 100vw respectivamente.</p>
+
+                <p class="d-lg-inline-block w-50">Estos párrafos trabajan en bloque (por defecto) desde xs en adelante pero como les aplicamos la clase d-lg-inline-block, desde lg cambian el modo de ubicarse. Pero siempre tienen un ancho del 50% ya que esta clase no acepta cambiar por tamaño de viewport (no acepta sufijo de medio).</p><!--
+
+                --><p class="d-lg-inline-block w-50">Estos párrafos trabajan en bloque (por defecto) desde xs en adelante pero como les aplicamos la clase d-lg-inline-block, desde lg cambian el modo de ubicarse. Pero siempre tienen un ancho del 50% ya que esta clase no acepta cambiar por tamaño de viewport (no acepta sufijo de medio).</p>
+            </div>
+
+            <div class="col-md fondo5">
+                <h2>Lis inline en todos los tamaños</h2>
+
+                <ul>
+                    <li class="d-inline">item</li>
+                    <li class="d-inline">item</li>
+                    <li class="d-inline">item</li>
+                </ul>
+            </div>
+
+            <div class="col-md fondo1">
+                <h2>Vinculos en bloque a partir de md</h2>
+
+                <a href="#" class="d-md-block">Vinculo</a>
+                <a href="#" class="d-md-block">Vinculo</a>
+                <a href="#" class="d-md-block">Vinculo</a>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6 fondo1">
+                <h2>Alto de la caja</h2>
+
+                <p>El párrafo tiene aplicada la clase <strong>h-*</strong> para ajustar su alto (también le aplicamos un borde para visualizarlo). Los valores que representa el * son los mismos que para el ancho: 25, 50, 75, 100 y auto; donde cada número implica un valor de porcentaje y auto es el automático de su contenido.</p>
+
+                <p>Al igual que para el ancho, existen las clase mh-100, vh-100 y mim-vh-100 que ajustan un min-height de 100%, un 100vh y un min-height de 100vh respectivamente</p>
+            </div>
+            
+            <div class="col-lg-6 fondo2">
+                <h2>Párrafo con alto del 50%</h2>
+                
+                <p class="h-50 borde">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, aperiam!</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+.borde {
+    border: 1px solid black;
+}
+
+.fondo1 {
+    background-color: pink;
+}
+
+.fondo2 {
+    background-color: lightcoral;
+}
+
+.fondo3 {
+    background-color: lightsalmon;
+}
+
+.fondo4 {
+    background-color: palegreen;
+}
+
+.fondo5 {
+    background-color: darkseagreen;
+}
+
+.fondo6 {
+    background-color: aquamarine;
+}
+
+.alto {
+    height: 300px;
+}
+

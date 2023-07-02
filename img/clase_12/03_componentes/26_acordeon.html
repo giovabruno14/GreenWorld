@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Afectamos a la h3 funcionando como botón, le aplicamos la manito del mouse en hover y le cambiamos el color de fondo (se aplica tanto abierto como cerrado el componente). */
+
+        #variantes .accordion-button{
+            cursor: pointer;
+            background-color: salmon;
+            color: balck;
+        }
+
+        /* Regla para la h3 cuando no está colapsada, cambiamos su color de texto y fondo para mostrarla activa. */
+
+        #variantes .accordion-button:not(.collapsed) {
+            background-color: orangered;
+            color: white;
+        }
+
+        /* Con estas dos reglas podemos cambiar la imagen del ícono que aplica el framework para cuando el colapsable se encuentra cerrado y cuando está abierto respectivamente.
+        
+        La idea no es quitarles la imagen como acá sino dejar una referencia de cómo se modifican, por eso en el último colapsable volvemos a aplicar la imagen del icono cuando está colapsado. 
+        
+        En el caso del colapsable abierto se está usando la misma imagen que usa el framework cuando está cerrado para reemplazar la de color azul que aplica por default (sÍ le dejamos la rotación para que apunte para arriba). */
+
+        #variantes .accordion-button::after {
+            background-image: none;
+        }
+        #variantes .accordion-item:last-child .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");;
+        }
+       
+        #variantes .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Componentes</h1>
+    </header>
+
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 borde pb-3">
+
+                <h2>Acordeón</h2>
+
+                <p>Es un componente colapsable que permite incorporar mucha información que no siempre sea visible. Cuando se presenta un grupo de este tipo de componenetes (dos o más), desde el punto de vista de la usabilidad se recomienda que el primero se muestre abierto al cargar la página.</p>
+                
+                <p>De este modo, el usuario no lo confundirá con una estructura navegable sino que "aprende" inmediatamente su uso, al ver uno abierto y los demás cerrados.</p>
+
+                <!-- Al contenedor de los sectores colapsables le aplicamos la clase accordion y un id (al que hacen referencia esos sectores colapsables desde el atributo data-bs-parent).
+                
+                También hay una clase opcional para agregarle que es accordion-flush que genera que no se apliquen algunos bordes, bordes redondeados, etc. -->
+
+                <div class="accordion" id="colapsable">
+
+                    <!-- Cada sector colapsable lleva la clase accordion-item. -->
+
+                    <div class="accordion-item">
+
+                        <!-- El título, con la clase accordion-header, es la parte de cada item colapsable que es siempre visible y la que recibe el click del mouse para abrir o cerrar la parte colapsable del control. También lleva un id. -->
+
+                        <h3 class="accordion-header" id="tituloUno">
+
+                            <!-- El botón es la parte que reacciona al click del mouse del encabezado del item, lleva los atributos:
+                            
+                            - data-bs-toggle: con valor collapse le brinda la funcionalidad de abrir y cerrar el colapsable.
+                        
+                            - data-bs-target: apunta al id de la parte collapsable del item.
+                            
+                            - aria-expanded: recibe los valores true o false de acuerdo a cómo se encuentra el control al momento de cargar la página (el primero que se encuentra abierto lleva el valor true y los demás que se encuentran cerrados, el valor false). Esta información se brinda a los lectores de pantalla para no videntes. 
+                        
+                            - aria-controls: apunta al id de la parte colapsable del item e indica que esta parte del control está unida o conectada con aquella otra (al hacer click acá se abre o cierra la parte colapsable del item). Esta información se brinda a los lectores de pantalla para no videntes. -->
+
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ContenidoUno" aria-expanded="true" aria-controls="ContenidoUno">
+                                Colapsable Uno
+                            </button>
+                        </h3>
+
+                        <!-- Esta es la parte colapsable del item, recibe el id (al que apuntan los atributos data-bs-target y aria-controls recién descriptos) y las clases accordion-collapse y collapse. Si queremos que este item se cargue abierto, se debe agregar la clase show (y el aria-expanded del botón anterior en true). 
+                            
+                        El atributo aria-labelledby apunta al id del título del item y esto indica que la descripción de esta parte del control, para los no videntes, se debe obtener del texto del elemento que tiene aplicado el id (el texto del título, en este caso).
+                    
+                        El atributo data-bs-parent apunta al id del contenedor de todos los items, esto agrega la funcionalidad que si al momento de abrir este item se cierre cualquier otro que estuviera abierto previamente, de este modo, los item tendrán apertura excluyente (solo uno por vez se encuentra abierto).-->
+
+                        <div id="ContenidoUno" class="accordion-collapse collapse show" aria-labelledby="tituloUno" data-bs-parent="#colapsable">
+
+                            <!-- El contenido colapsable se encuentra dentro del accordion-body. Puede tratarse de cualquier tipo de contenido, texto, imágenes, videos, formularios, etc. -->
+                            <div class="accordion-body">
+                                <h4>Contenido del colapsable 1</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptatum, libero perferendis, quaerat cum dolor consectetur accusamus ducimus magni doloribus perspiciatis, sequi vitae beatae saepe! Culpa inventore minima pariatur sint?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- A partir del segundo item ya se cargan todos cerrados, notar que el atributo aria-expanded del botón en el header presenta el valor false y que el accordion-collapse no presenta la clase show aplicada. -->
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="tituloDos">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoDos" aria-expanded="false" aria-controls="contenidoDos">
+                                Colapsable Dos
+                            </button>
+                        </h3>
+                        <div id="contenidoDos" class="accordion-collapse collapse" aria-labelledby="tituloDos" data-bs-parent="#colapsable">
+                            <div class="accordion-body">
+                                <h4>Contenido del colapsable 2</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptatum, libero perferendis, quaerat cum dolor consectetur accusamus ducimus magni doloribus perspiciatis, sequi vitae beatae saepe! Culpa inventore minima pariatur sint?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="tituloTres">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoTres" aria-expanded="false" aria-controls="contenidoTres">
+                                Colapsable Tres
+                            </button>
+                        </h3>
+                        <div id="contenidoTres" class="accordion-collapse collapse" aria-labelledby="tituloTres" data-bs-parent="#colapsable">
+                            <div class="accordion-body">
+                                <h4>Contenido del colapsable 3</h4>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptatum, libero perferendis, quaerat cum dolor consectetur accusamus ducimus magni doloribus perspiciatis, sequi vitae beatae saepe! Culpa inventore minima pariatur sint?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 borde pb-3" id="variantes">
+                <h2>Variantes</h2>
+
+                <p>Si los items no son contenidos por un elemento al que se le aplica la clase accordion, no funcionan en grupo sino de manera individual en cuanto a su apertura y cierre. Tampoco ya es necesario el atributo data-bs-parent, ya que apunta al id de este contenedor que no existe (esto generaba la apertura excluyente).</p>
+
+                <div class="accordion-item">
+
+                    <!-- Corrección semántica: como el funcionamiento del control se aplica con las clases y atributos del framework no es necesario que el header del item sea un título y su contenido un botón (lo cual no es nada semántico ya que los encabezados llevan texto no botones).
+                    
+                    Por lo tanto, si cambiamos de etiquetas el funcionamiento no se resiente. Lo único que debemos quitar es el atributo type con valor button que es exclusivo para botones o vínculos (en cualquier otra etiqueta es inválido).
+                
+                    Al quitarle el atributo type el navegador ya no pone "la manito" en el cursor de mouse en hover sobre el header, si lo queremos recuperar, lo hacemos desde CSS. -->
+
+                    <div class="accordion-header" id="tituloCuatro">
+                        <h3 class="accordion-button" data-bs-toggle="collapse" data-bs-target="#contenidoCuatro" aria-expanded="true" aria-controls="contenidoCuatro">
+                            Colapsable Cuatro
+                        </h3>
+                    </div>
+                    <div id="contenidoCuatro" class="accordion-collapse collapse show" aria-labelledby="tituloCuatro">
+                        <div class="accordion-body">
+                            <h3>Contenido del colapsable 4</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptatum, libero perferendis, quaerat cum dolor consectetur accusamus ducimus magni doloribus perspiciatis, sequi vitae beatae saepe! Culpa inventore minima pariatur sint?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" id="tituloCinco">
+                        <h3 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoCinco" aria-expanded="false" aria-controls="contenidoCinco">
+                            Colapsable Cinco
+                        </h3>
+                    </div>
+                    <div id="contenidoCinco" class="accordion-collapse collapse" aria-labelledby="tituloCinco">
+                        <div class="accordion-body">
+                            <h3>Contenido del colapsable 5</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptatum, libero perferendis, quaerat cum dolor consectetur accusamus ducimus magni doloribus perspiciatis, sequi vitae beatae saepe! Culpa inventore minima pariatur sint?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <div class="accordion-header" id="tituloSeis">
+                        <h3 class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoSeis" aria-expanded="false" aria-controls="contenidoSeis">
+                            Colapsable Seis
+                        </h3>
+                    </div>
+                    <div id="contenidoSeis" class="accordion-collapse collapse" aria-labelledby="tituloSeis">
+                        <div class="accordion-body">
+                            <h3>Contenido del colapsable 6</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea voluptatum, libero perferendis, quaerat cum dolor consectetur accusamus ducimus magni doloribus perspiciatis, sequi vitae beatae saepe! Culpa inventore minima pariatur sint?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Clases para imágenes</h1>
+    </header>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md">
+               
+                <!-- Para hacer la img fluida aplicamos la clase img-fluid, NO LA HACE RESPONSIVE, sino fluida (seguimos necesitando la etiqueta picture para img responsive). -->
+                
+                <h2>Imagen Fluida</h2>
+                <img src="recursos/foto.jpg" alt="foto" class="img-fluid mb-3">
+
+            </div>
+            <div class="col-md">
+
+                <h2>Con bordes redondeados</h2>
+                
+                <!-- También le podemos aplicar las clases de bordes para cajas. -->
+                
+                <img src="recursos/foto.jpg" alt="foto" class="img-fluid rounded mb-3">
+
+            </div>
+            <div class="col-md">
+
+                <h2>Imagen redonda</h2>
+                <img src="recursos/foto.jpg" alt="foto" class="img-fluid rounded-circle mb-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md fondo">
+
+                <h2>Imagen Thumbnail</h2>
+                
+                <!-- La clase img-thumbnail le agrega un borde y borde redondeado dándole un ascpecto de miniatura de galería. No es necesario hacerla fluida ya que lo incluye. -->
+                
+                <img src="recursos/foto.jpg" alt="foto" class="img-thumbnail  mb-3">
+
+            </div>
+            <div class="col-md">
+
+                <h2>Thumbnail con color</h2>
+                
+                <!-- Si le aplicamos un color de fondo con una clase del framework o personal, cambiamos el marco de la img. -->
+                
+                <img src="recursos/foto.jpg" alt="foto" class="img-thumbnail bg-info mb-3">
+
+            </div>
+            <div class="col-md">
+
+                <h2>Imagen redondeada (pill)</h2>
+                <img src="recursos/foto.jpg" alt="foto" class="img-thumbnail rounded-pill mb-3">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md">
+
+                <h2>Todo junto</h2>
+                <img src="recursos/foto.jpg" alt="foto" class="img-thumbnail  rounded-circle fondo2 mb-3">
+
+            </div>
+            <div class="col-md">
+
+                <h2>Figure</h2>
+                
+                <!-- Cuando incluimos la img dentro de un figure tenemos clases especiales para agregar: al figure (lo hace trabajar inline-block para poder ponerlos en línea) a la img, le agrega un margen inferior para que no se peque al texto (tenemos que hacerla fluida ya que no lo hace esta clase) y al figcaption, le establece un tamaño y color de texto. -->
+                
+                <figure class="figure">
+                    <img src="recursos/foto.jpg" alt="foto" class="img-fluid figure-img">
+                    <figcaption class="figure-caption text-end">Texto de la imagen</figcaption>
+                </figure>
+
+            </div>
+        </div>
+    </section>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Display Flex</h1>
+    </header>
+
+    <!-- Podemos aplicar clases que convierten las cajas (contenedores o contenido de columnas) en cajas flexibles con display flex (o inline-flex). 
+        
+    Así como la clase d-* aplicaba los valores none, block, etc; también existe la clase que aplica el valor flex. 
+    
+    Como con el resto de los valores, se puede aplicar para todos los tamaños de pantalla o a partir de alguno de ellos (como vemos en el primer container que se aplica desde el tamaño lg, por lo que en tamaños menores no se aplica). 
+    
+    Ya vimos que además tenemos disponible clases para alineación horizontal y vertical de los flex items, que también podemos usar aplicando "flex a mano" con esta clase. 
+    
+    También tenemos clases para asignar la dirección del main axis (flex-direction) y la cantidad de líneas de contenido interno (flex-wrap). -->
+
+    <div class="container borde alto d-lg-flex justify-content-center align-items-center">
+        <p class="fondo1">Contenido del párrafo.</p>
+    </div>
+
+    <div class="container borde alto d-flex justify-content-center align-items-center flex-row">
+        <p class="fondo1">Cambiando el flex-direction (row, por default).</p>
+        <p class="fondo2">Cambiando el flex-direction (row, por default).</p>
+    </div>
+
+    <div class="container borde alto d-flex justify-content-center align-items-center flex-column">
+        <p class="fondo1">Cambiando el flex-direction (column, por default).</p>
+        <p class="fondo2">Cambiando el flex-direction (column, por default).</p>
+    </div>
+
+    <div class="container borde alto d-flex justify-content-center align-items-center flex-nowrap">
+        <p class="fondo1" style="width: 400px">Cambiando la cantidad de líneas de elementos (nowrap, por defecto). Para evidenciarlo le aplicamos un ancho de 400px a las cajas.</p>
+        <p class="fondo2" style="width: 400px">Cambiando la cantidad de líneas de elementos (nowrap, por defecto). Para evidenciarlo le aplicamos un ancho de 400px a las cajas.</p>
+    </div>
+
+    <div class="container borde alto d-flex justify-content-center align-items-center flex-wrap">
+        <p class="fondo1" style="width: 400px">Cambiando la cantidad de líneas de elementos (wrap). Para evidenciarlo le aplicamos un ancho de 400px a las cajas.</p>
+        <p class="fondo2" style="width: 400px">Cambiando la cantidad de líneas de elementos (wrap). Para evidenciarlo le aplicamos un ancho de 400px a las cajas.</p>
+    </div>
+    <div class="container borde alto d-flex justify-content-center align-items-center flex-wrap-reverse">
+        <p class="fondo1" style="width: 400px">Cambiando la cantidad de líneas de elementos (wrap-reverse). Para evidenciarlo le aplicamos un ancho de 400px a las cajas.</p>
+        <p class="fondo2" style="width: 400px">Cambiando la cantidad de líneas de elementos (wrap-reverse). Para evidenciarlo le aplicamos un ancho de 400px a las cajas.</p>
+    </div>
+
+    <!-- Al item le podemos aplicar la clase flex-fill que hace que tome todo el espacio disponible del contenedor flex sea horizontal o vertical dependiendo del flex-direction (el otro elemento toma el ancho o alto de su contenido=. -->
+
+    <div class="container borde alto d-flex justify-content-center align-items-center flex-row">
+        <p class="flex-fill fondo1">Contenido del párrafo (flex-fill).</p>
+        <p class="fondo2">Contenido del párrafo.</p>
+    </div>
+
+    <div class="container borde alto d-flex justify-content-center align-items-center flex-column">
+        <p class="flex-fill fondo1">Contenido del párrafo (flex-fill).</p>
+        <p class="fondo2">Contenido del párrafo.</p>
+    </div>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

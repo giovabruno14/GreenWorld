@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="container p-3 fondo3">
+        <h1>Componentes</h1>
+    </header>
+
+    <!-- También se puede incluir textos que se ubiquen por encima de las imágenes que funcionen como una especie de descripción de la misma. 
+        
+    Esos textos se incluyen dentro de un div con la clase carousel-caption, por debajo de la imagen en el código. -->
+
+    <div class="container p-0">
+        <div id="galeria" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#galeria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+                <button type="button" data-bs-target="#galeria" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+                <button type="button" data-bs-target="#galeria" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+                <button type="button" data-bs-target="#galeria" data-bs-slide-to="3" aria-label="Imagen 4"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="recursos/1.jpg" alt="imagen">
+
+                    <!-- En este caso se le aplica la clase display para que solo se muestre desde el tamaño md en adelante. -->
+
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Imagen Uno</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, expedita.</p>
+                        </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="recursos/2.jpg" alt="imagen">
+                    <div class="carousel-caption d-none d-md-block">
+                            <h2>Imagen Dos</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, expedita.</p>
+                        </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="recursos/3.jpg" alt="imagen">
+                    <div class="carousel-caption d-none d-md-block">
+                            <h2>Imagen Tres</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, expedita.</p>
+                        </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="recursos/4.jpg" alt="imagen">
+                    <div class="carousel-caption d-none d-md-block">
+                            <h2>Imagen Cuatro</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, expedita.</p>
+                        </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#galeria" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#galeria" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="row">
+            <article class="col-md">
+                <h2>Título del artículo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+            </article>
+            <article class="col-md">
+                <h2>Título del artículo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+            </article>
+        </div>
+    </section>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

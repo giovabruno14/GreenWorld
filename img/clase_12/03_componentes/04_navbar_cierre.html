@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Componentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra" aria-controls="barra" aria-expanded="false" aria-label="Botón hamburguesa">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="barra">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    
+    <!-- La barra de navegación no cierra luego de navegar un ancla, cuando está presente el botón hamburguesa, en una landing page o en una one page, ya que el componente está pensado para un sitio tradicional conformado por varios html (al navegar a otro html la barra aparece siempre cerrada cuando carga el documento.
+
+    Esto significa un error de usabilidad de la web ya que la barra desplegada tapará casi toda la pantalla del dispositivo evitando que se pueda ver el contenido que acabamos de navegar y obligará al usuario a realizar el cierre manual presionando nuevamente el botón hamburguesa.
+        
+    Con este script lograremos que el menú se colapse luego de navegar, está programado genéricamente utilizando las clases que Bootstrap le aplica al componente navbar.-->
+    
+    <script>
+        const btns = document.querySelectorAll('.nav-item')
+        const barra = document.querySelector(".navbar-collapse")
+        const cierre = new bootstrap.Collapse(barra, {
+            toggle: false
+        })
+        btns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                if(barra.classList.contains( 'show' )){
+                    cierre.toggle()
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

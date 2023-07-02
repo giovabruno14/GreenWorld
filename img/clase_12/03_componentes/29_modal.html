@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Componentes</h1>
+    </header>
+
+    <section class="container">
+        <div class="row">
+
+            <div class="col-md-6 borde pb-3">
+
+                <h2>Modal</h2>
+
+                <p>Para agregar un modal necesitamos dos estructuras: una etiqueta html que recibe el click (vínculo, botón, o cualquier otra etiqueta) a la que le agregamos los atributos data-bs-toggle con valor modal para su funcionalidad y data-bs-target con el valor del id del modal que va a abrir.</p>
+                    
+                <p>Por otro lado tenemos el modal en sí que estará oculto y se abrirá por encima de todos los elementos de la página (por lo que puede estar ubicado en cualquier lugar del código html, no es necesario que esté dentro de la misma col, row o container.</p>
+
+                <a href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal">Abrir modal</a>
+
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
+                    Abrir modal
+                </button>
+
+                <p class="bg-info text-white mt-3" data-bs-toggle="modal" data-bs-target="#modal">Abrir modal</p>
+            </div>
+
+            <div class="col-md-6 borde pb-3">
+
+                <h2>Otros detalles</h2>
+
+                <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#modal2">
+                    Modal con mucho contenido
+                </button>
+
+                <button type="button" class="btn btn-secondary m-3" data-bs-toggle="modal" data-bs-target="#modal3">
+                    Centrado verticalmente
+                </button>
+
+                <button type="button" class="btn btn-success m-3" data-bs-toggle="modal" data-bs-target="#modal4">
+                    Con grilla interna para el contenido.
+                </button>
+
+                <button type="button" class="btn btn-dark m-3" data-bs-toggle="modal" data-bs-target="#modal5">
+                    Tamaño extra grande
+                </button>
+
+                <button type="button" class="btn btn-warning m-3" data-bs-toggle="modal" data-bs-target="#modal6">
+                    Tamaño grande
+                </button>
+
+                <button type="button" class="btn btn-danger m-3" data-bs-toggle="modal" data-bs-target="#modal7">
+                    Tamaño chico
+                </button>
+
+            </div>
+
+            <!-- El modal puede estar maquetado en cualquier del documento (siempre por encima de la etiqueta script para que obtenga su funcionamiento), es decir que no es necesario que esté dentro del mismo container donde se encuentra el botón que lo abre ya que estará oculto al cargar el documento y al abirse lo hará position fixed. Por supuesto que también se puede maquetar dentro del contenedor del bloque de información donde se encuentra el botón que lo abre (como en este primer modal). 
+
+            Cuando se utilice para mensajes, formularios o cualquier tipo de contenido sin peso de indexación, podemos utilizar la etiqueta aside en vez de un div como contenedor (y esto no influye para nada en su funcionamiento o diseño). 
+                
+            Necesita las clases modal para su diseño y fade para el efecto de apertura y cierre; un id para "apuntarle" desde la etiqueta que lo abre (con el attr data-bs-target). 
+                
+            El tabindex con valor -1 es para que no entre en historial de navegación (que no se abra luego de haberlo cerrado al hacer click en el back del browser).
+            
+            El role dialog y los attr aria para accesibilidad: aria-labelledby del modal para que utilice el contenido de la etiqueta con ese valor de id como descripción y aria-hidden con valor true informa que el componente está oculto al cargar el html. -->
+
+            <aside class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby ="titulo_modal" aria-hidden="true">
+
+                <!-- El contenedor interno con la clase modal-dialog. -->
+
+                <div class="modal-dialog">
+
+                    <!-- El contenedor con la clase modal-content que incluirá todo el contenido del modal. -->
+
+                    <div class="modal-content">
+
+                        <!-- Modal header: opcional. Si incluye un encabezado hay una clase especial para él. 
+                        
+                        El id del título se incluye para vincularlo al aria-labelledby del modal para que utilice el contenido de esta etiqueta como tooltip orientativo para lectores de pantalla para no videntes. -->
+
+                        <div class="modal-header">
+
+                            <h3 class="modal-title" id="titulo_modal">Titulo del modal</h3>
+
+                            <!-- Botón clásico de cierre de Bootstrap (opcional). -->
+
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Botón de cierre">
+                            </button>
+
+                        </div>
+
+                        <!-- Modal body para el contenido del modal. Puede incluir cualquier tipo de elemento que sea necesario: textos, imágenes, formulario, video, etc. -->
+
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et pariatur culpa voluptatum. Autem nulla magni aspernatur a itaque quas architecto hic maiores impedit eum! Aut aspernatur ullam cum accusantium.</p>
+                        </div>
+
+                        <!-- Modal footer (opcional) donde se incluyen, generalmente, uno o dos botones para la interacción con el usuario (siempre uno asegura el cierre con el attr data-bs-dismiss con valor modal como el que se incluye en el header, el otro se programará con las acciones necesarias del objetivo para el cuál incluimos un modal. -->
+
+                        <div class="modal-footer">
+
+                            <!-- Botón de cierre del modal. -->
+
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+                            <!-- Botón sin función por default para programar su acción. -->
+
+                            <button type="button" class="btn btn-primary">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+            
+        </div>
+    </section>
+
+    
+
+    <!-- Si el modal tiene mucho contenido se produce scroll vertical automático para poder visualizarlo (no hay que agregar nada).
+    
+    Con los atributos data-bs-backdrop y data-bs-keyboard se evita que el modal pueda cerrarse al hacer click fuera de él en cualquier lugar de la pantalla. -->
+
+    <div class="modal fade" id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="titulo_modal2" aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="titulo_modal2">Mucho contenido</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Botón de cierre">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et pariatur culpa voluptatum. Autem nulla magni aspernatur a itaque quas architecto hic maiores impedit eum! Aut aspernatur ullam cum accusantium.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et pariatur culpa voluptatum. Autem nulla magni aspernatur a itaque quas architecto hic maiores impedit eum! Aut aspernatur ullam cum accusantium.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et pariatur culpa voluptatum. Autem nulla magni aspernatur a itaque quas architecto hic maiores impedit eum! Aut aspernatur ullam cum accusantium.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et pariatur culpa voluptatum. Autem nulla magni aspernatur a itaque quas architecto hic maiores impedit eum! Aut aspernatur ullam cum accusantium.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et pariatur culpa voluptatum. Autem nulla magni aspernatur a itaque quas architecto hic maiores impedit eum! Aut aspernatur ullam cum accusantium.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal centrado verticalmente en la pantalla. Al segundo div le agregamos la clase modal-dialog-centered. -->
+
+    <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="titulo_modal3" aria-hidden="true">
+
+        <!-- modal-dialog-centered -->
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="titulo_modal3">Modal Centrado</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Botón de cierre">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et pariatur culpa voluptatum. Autem nulla magni aspernatur a itaque quas architecto hic maiores impedit eum! Aut aspernatur ullam cum accusantium.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal con grilla interna. En el body donde incluimos el contenido, podemos agregar una row que habilita las 12 columnas de Bootstrap para distribuir los elementos internos. -->
+
+    <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="titulo_modal4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="titulo_modal4">Modal con grilla</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Botón de cierre">
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Agregamos una row. -->
+
+                    <div class="row">
+                        <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, cupiditate. Fugit laudantium dignissimos inventore ex maxime fuga totam doloremque ea natus perferendis explicabo nihil harum earum quibusdam ratione, impedit sit?</p>
+                        <p class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, cupiditate. Fugit laudantium dignissimos inventore ex maxime fuga totam doloremque ea natus perferendis explicabo nihil harum earum quibusdam ratione, impedit sit?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tamaño extra grande. Al segundo div le agregamos la clase modal-xl para agrandar el tamaño del modal. -->
+
+    <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="titulo_modal5" aria-hidden="true">
+
+        <!-- modal-xl -->
+
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="titulo_modal5">Modal tamaño grande</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Botón de cierre">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et pariatur culpa voluptatum. Autem nulla magni aspernatur a itaque quas architecto hic maiores impedit eum! Aut aspernatur ullam cum accusantium.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tamaño grande. Al segundo div le agregamos la clase modal-lg para agrandar el tamaño del modal. -->
+
+    <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="titulo_modal6" aria-hidden="true">
+
+        <!-- modal-lg -->
+
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="titulo_modal6">Modal tamaño grande</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Botón de cierre">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis et pariatur culpa voluptatum. Autem nulla magni aspernatur a itaque quas architecto hic maiores impedit eum! Aut aspernatur ullam cum accusantium.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tamaño chico. Al segundo div le agregamos la clase modal-sm para achicar el tamaño del modal. -->
+
+    <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="titulo_modal7" aria-hidden="true">
+
+        <!-- modal-sm -->
+
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="titulo_modal7">Modal tamaño chico</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Botón de cierre">
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre...">
+                        </div>
+                        <div class="mb-3">
+                            <label for="clave" class="form-label">Clave</label>
+                            <input type="password" class="form-control" id="clave" placeholder="Nombre...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" value="entrar" class="btn btn-success float-end">
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- En este caso como se utiliza el modal para habilitar un formulario de logueo, no es necesario el footer con los botones clásicos ya que al enviarse el form se cierra el modal. -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

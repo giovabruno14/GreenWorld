@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Componentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        header{
+            position: relative;
+        }
+
+        #logo {
+            width: 40px;
+            height: 40px;
+            background: url("recursos/logo.png");
+            font-size: 0;
+            position: absolute;
+            top: 8px;
+            left: 20px;
+            z-index: 1;
+        }
+    
+        @media screen and (max-width: 991px){
+            #logo {
+                left: calc(50% - 20px);
+            }
+
+            /* Primero le aplicamos position relative al container-fluid que está dentro del nav ya que vamos a poner con position absolute a la parte colapsable para que en vez de "empujar" el contenido para abajo cada vez que se abre, se "monte" por sobre el contenido. */
+
+            .navbar .container-fluid {
+                position: relative;
+            }
+
+            /* Al div que contiene a la barra le aplicamos el position absolute, lo que hace que tome el width de su contenido, por eso lo volvemos a ajustar al 100%. 
+            
+            Le aplicamos un color de fondo (el mismo que el header en este caso) ya que normalmente no tiene color de fondo sino que toma el del header que cuando se abre lo obliga a crecer, luego lo desplazamos hacia abajo para que no pise al logo y lo posicionamos a la izquierda.
+            
+            Por último, ajustamos el z-index para traerlo al frente y que no quede tapado por ningún otro elemento. Todo esto lo hacemos en la query de hasta 991px que es hasta el tamaño, en este caso, en el que la barra se muestra como hamburguesa ya que seteamos que a partir de lg se expanda. */
+
+            .navbar-collapse {
+                position: absolute;
+                width: 100%;
+                background-color: rgb(37, 37, 41);
+                top: 50px;
+                left: 0;
+                z-index: 1000;
+            }
+        }
+
+        
+
+        
+    </style>
+</head>
+
+<body>    
+    <header class="container">
+        <h1 id="logo">Bootstrap</h1>        
+        <nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra" aria-controls="barra" aria-expanded="false" aria-label="Botón hamburguesa">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="barra">
+                    <ul class="navbar-nav text-center ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#uno">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dos">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tres">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cuatro">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="row" id="uno">
+            <div class="col-md-12 borde pb-3">
+                <h2>Home</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row" id="dos">
+            <div class="col-md-12 borde pb-3">
+                <h2>Quienes Somos</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row" id="tres">
+            <div class="col-md-12 borde pb-3">
+                <h2>Productos</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row" id="cuatro">
+            <div class="col-md-12 borde pb-3">
+                <h2>Contacto</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum totam nisi delectus, voluptas, ad magnam nemo dolore unde sequi esse ratione quod laudantium? Quibusdam ad rem ea ab, nulla obcaecati?</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

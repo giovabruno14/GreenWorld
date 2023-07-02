@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Bordes</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 border mb-3">
+                <h2>Bordes</h2>
+
+                <p>Podemos aplicar bordes directamente con las clases del framework con la clase border (lo aplica a los 4 costados de la caja, como en esta caja) y border-*, donde el * se reemplaza por los valores top, end, start y bottom. También existe la clase border-0 para quitarle el borde a una caja que lo tenga aplicado y todas sus combinaciones: border-top-0, border-start-0, etc. A las cajas les aplicamos margen para visualizar cómodamente los bordes aplicados.</p>
+            </div>
+            <div class="col-md border-top m-3">
+                <p>top</p>
+            </div>
+            <div class="col-md border-end m-3">
+                <p>end (right)</p>
+            </div>
+            <div class="col-md border-bottom m-3">
+                <p>bottom</p>
+            </div>
+            <div class="col-md border-start m-3">
+                <p>start (left)</p>
+            </div>
+            
+            <!-- Le aplicamos un borde con nuestra clase borde (en nuestro css) para eliminarlo con la clase border-0. También podemos aplicar borde cero por lado de la caja:
+                * border-top-0
+                * border-end-0
+                * border-bottom-0
+                * border-start-0            
+            -->
+            
+            <div class="col-md borde border-0 m-3">
+                <p>sin borde</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 border mb-3">
+                <h2>Border color</h2>
+                
+                <p>También podemos darle color al borde con las clases del framework que maneja sus colores clásicos y tradicionales. Se agrega la clase border más la que corresponda al color.</p>
+            </div>
+            <div class="col-md border border-primary m-1">
+                <p>primary</p>
+            </div>
+            <div class="col-md border border-secondary m-1">
+                <p>secondary</p>
+            </div>
+            <div class="col-md border border-success m-1">
+                <p>success</p>
+            </div>
+            <div class="col-md border border-danger m-1">
+                <p>danger</p>
+            </div>
+            <div class="col-md border border-warning m-1">
+                <p>warning</p>
+            </div>
+            <div class="col-md border border-info m-1">
+                <p>info</p>
+            </div>
+            
+            <!-- A esta caja le aplicamos un color de fondo para que se noten los bordes claros.-->
+            
+            <div class="col-md fondo1 m-1">
+                <p class="border border-light">light</p>
+            </div>
+            
+            <!-- A esta caja le aplicamos un color de fondo para que se noten los bordes claros.-->
+            
+            <div class="col-md fondo1 m-1">
+                <p class="border border-white">white</p>
+            </div>
+
+            <div class="col-md border border-dark m-1">
+                <p>dark</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 border mb-3">
+                <h2>Opacidad de borde</h2>
+
+                <p>Podemos darle transparencia al borde con las clases del framework. Se agrega la clase border y si queremos también cualquiera que corresponda al color.</p>
+            </div>
+            <div class="col-md border border-primary m-1">
+                <p>Opacidad 100% (no se aplica ninguna calse border-opacity).</p>
+            </div>
+            <div class="col-md border border-primary border-opacity-75 m-1">
+                <p>Opacidad 75%.</p>
+            </div>
+            <div class="col-md border border-primary border-opacity-50 m-1">
+                <p>Opacidad 50%.</p>
+            </div>
+            <div class="col-md border border-primary border-opacity-25 m-1">
+                <p>Opacidad 25%.</p>
+            </div>
+            <div class="col-md border border-primary border-opacity-10 m-1">
+                <p>Opacidad 10%.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 border mb-3">
+                <h2>Border width</h2>
+
+                <p>Tenemos algunos valores de border-width para el ancho de borde que van del 1 al 5.</p>
+            </div>
+            <div class="col-md border border-dark border-1 m-1">
+                <p>border-1</p>
+            </div>
+            <div class="col-md border border-dark border-2 m-1">
+                <p>border-2</p>
+            </div>
+            <div class="col-md border border-dark border-3 m-1">
+                <p>border-3</p>
+            </div>
+            <div class="col-md border border-dark border-4 m-1">
+                <p>border-4</p>
+            </div>
+            <div class="col-md border border-dark border-5 m-1">
+                <p>border-5</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 border mb-3">
+                <h2>Border radius</h2>
+
+                <p>Con otras clases podemos redondear los vértices de las cajas, como con los colores, debemos primero agregar la clase border para aplicar el borde y luego la que redondea (por supuesto que también podemos agregar las de color). Las clases redondean todas las esquinas o las de un lado en particular de la caja.</p> 
+                
+                <p>Por último, también hay una clase para eliminar el redondeo de bordes si alguna caja lo tiene aplicado: rounded-0. También el valor numérico puede asumir del 1 al 3 para mayor o menor border-radius</p>
+            </div>
+            <div class="col-md border border-danger rounded m-1">
+                <p>rounded</p>
+            </div>
+            <div class="col-md border border-danger rounded-top m-1">
+                <p>rounded-top</p>
+            </div>
+            <div class="col-md border border-danger rounded-end m-1">
+                <p>rounded-end</p>
+            </div>
+            <div class="col-md border border-danger rounded-bottom m-1">
+                <p>rounded-bottom</p>
+            </div>
+            <div class="col-md border border-danger rounded-start m-1">
+                <p>rounded-start</p>
+            </div>
+            <div class="col-md border border-danger rounded-circle m-1">
+                <p>rounded-circle</p>
+            </div>
+            <div class="col-md border border-danger rounded-pill m-1">
+                <p>rounded-pill</p>
+            </div>
+
+            <h3>Tamaño del border radius</h3>
+            
+            <div class="col-md border border-danger rounded-0 m-1">
+                <p>rounded-0</p>
+            </div>
+            <div class="col-md border border-danger rounded-1 m-1">
+                <p>rounded-1</p>
+            </div>
+            <div class="col-md border border-danger rounded-2 m-1">
+                <p>rounded-2</p>
+            </div>
+            <div class="col-md border border-danger rounded-3 m-1">
+                <p>rounded-3</p>
+            </div>
+            <div class="col-md border border-danger rounded-4 m-1">
+                <p>rounded-4</p>
+            </div>
+            <div class="col-md border border-danger rounded-5 m-1">
+                <p>rounded-5</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Componentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Componentes</h1>
+    </header>
+
+    <section class="container">
+        <div class="row mb-3">
+           
+            <div class="col-md">
+               
+                <h2>Card Simple</h2>
+                
+                <!-- El card es un componente moderno de presentación de información de cualquier tipo. 
+                    
+                Tenemos distintas clases que lo generan, tanto para el contenedor general, como para el body, el header y el footer de su estructura interna; como también para sus títulos, textos, imágenes, vínculos y cualquier otro elemento que pueda contener. -->
+                
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Título Pastilla</h3>
+                        <h4 class="card-subtitle">Subtítulo</h4>
+                        <p class="card-text">Las cards son contenedores de pequeñas porciones de información llamadas también, pastillas de información, pueden contener distintos elementos, imágenes, botones, etc y pueden presentar la información completa o un copete que se amplíe al clickear un vínculo o botón que la amplíe.</p>
+                        <hr>
+                        <a href="#" class="card-link">continuar leyendo</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md">
+
+                <h2>Card con imagen superior</h2>
+
+                <div class="card">
+                   
+                    <!-- No necesitamos hacerla fluida ya que la clase lo hace y, además, de aplica border-radius superior para que se ajuste al formato del card. -->
+                    
+                    <img class="card-img-top" src="recursos/3.jpg" alt="imagen">
+                    <div class="card-body">
+                        <h3 class="card-title">Título Pastilla</h3>
+                        <p class="card-text">A la imagen no es necesario hacerla fluida con img-fluid si le aplicamos card-img-top o card-img-bottom. Si la ubicamos por fuera del body de la card, ocupa el 100% de su ancho, si está adentro, el body limita ese ancho máximo. Si estando dentro del body no le aplicamos alguna clase para img de card, entonces sí va img-fluid.</p>
+                        <a href="#" class="btn btn-primary">ver +</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md">
+               
+                <h2>Card con imagen en body y botón flotado</h2>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <img class="card-img-top" src="recursos/1.jpg" alt="imagen">
+                        <h3 class="card-title">Título Pastilla</h3>
+                        <p class="card-text">A la imagen no es necesario hacerla fluida con img-fluid si le aplicamos card-img-top o card-img-bottom. Si la ubicamos por fuera del body de la card, ocupa el 100% de su ancho, si está adentro, el body limita ese ancho máximo. Si estando dentro del body no le aplicamos alguna clase para img de card, entonces sí va img-fluid.</p>
+                        <a href="#" class="btn btn-primary float-end">ver +</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col-md">
+               
+                <h2>Card con imagen inferior</h2>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Título Pastilla</h3>
+                        <h4 class="card-subtitle mb-2 text-muted">Subtítulo</h4>
+                        <p class="card-text">A la imagen no es necesario hacerla fluida con img-fluid si le aplicamos card-img-top o card-img-bottom. Si la ubicamos por fuera del body de la card, ocupa el 100% de su ancho, si está adentro, el body limita ese ancho máximo. Si estando dentro del body no le aplicamos alguna clase para img de card, entonces sí va img-fluid.</p>
+                    </div>
+                    
+                    <!-- Si la ubicamos abajo del card aplicamos la clase que le redondea los bordes inferiores. -->
+                    
+                    <img class="card-img-bottom" src="recursos/2.jpg" alt="imagen">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md">
+               
+                <h2>Card con header</h2>
+
+                <div class="card">
+                   
+                    <!-- Si agregamos el header no hace falta redondear los bordes superiores de la img ya que lo hace el header, por eso le aplicamos la clase img-fluid (lo mismo para si la img está abajo y tenemos un footer). -->
+                    
+                    <div class="card-header">
+                        <p class="m-0">nomalmente un texto destacado (no título).</p>
+                    </div>
+                    <img class="img-fluid" src="recursos/3.jpg" alt="imagen">
+                    <div class="card-body">
+                        <h3 class="card-title">Título Pastilla</h3>
+                        <p class="card-text">A la imagen no es necesario hacerla fluida con img-fluid si le aplicamos card-img-top o card-img-bottom. Si la ubicamos por fuera del body de la card, ocupa el 100% de su ancho, si está adentro, el body limita ese ancho máximo. Si estando dentro del body no le aplicamos alguna clase para img de card, entonces sí va img-fluid.</p>
+                        <a href="#" class="btn btn-primary btn-block">ver +</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col-md">
+               
+                <h2>Card con footer</h2>
+
+                <div class="card">
+                    <img class="card-img-top" src="recursos/4.jpg" alt="imagen">
+                    <div class="card-body">
+                        <h3 class="card-title">Título Pastilla</h3>
+                        <p class="card-text">A la imagen no es necesario hacerla fluida con img-fluid si le aplicamos card-img-top o card-img-bottom. Si la ubicamos por fuera del body de la card, ocupa el 100% de su ancho, si está adentro, el body limita ese ancho máximo. Si estando dentro del body no le aplicamos alguna clase para img de card, entonces sí va img-fluid.</p>
+                        <a href="#" class="btn btn-primary">ver +</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <p class="m-0">Card con pie de página.</p>
+                    </div>
+                </div> 
+            </div>            
+        </div>
+           
+        <div class="row mb-3">
+            <div class="col-md">
+               
+                <h2>Card con borde y header modificado</h2>
+                
+                <!-- reseteamos el border-radius que aplica por default el card y cambiamos el color del borde. Al header le aplicamos un color de fondo y texto cambiando la alineación por default. -->
+                
+                <div class="card rounded-0 border-danger">
+                    <div class="card-header bg-danger text-white text-end">
+                        <p class="m-0">nomalmente un texto destacado (no título).</p>
+                    </div>
+                    <div class="card-body">
+                        <img class="img-fluid" src="recursos/3.jpg" alt="imagen">
+                        <h3 class="card-title">Título Pastilla</h3>
+                        <p class="card-text">A la imagen no es necesario hacerla fluida con img-fluid si le aplicamos card-img-top o card-img-bottom. Si la ubicamos por fuera del body de la card, ocupa el 100% de su ancho, si está adentro, el body limita ese ancho máximo. Si estando dentro del body no le aplicamos alguna clase para img de card, entonces sí va img-fluid.</p>
+                        <a href="#" class="btn btn-secondary">ver +</a>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="col-md">
+               
+                <h2>Card sin borde con fondo</h2>
+                
+                <!-- Quitamos el borde del card y le aplicamos un color de fondo con una clase personal (también podría ser una de BT). 
+                    
+                Lo mismo hicimos en el footer. -->
+
+                <div class="card border-0 fondo5">
+                    <img class="card-img-top" src="recursos/4.jpg" alt="imagen">
+                    <div class="card-body">
+                        <h3 class="card-title">Título Pastilla</h3>
+                        <p class="card-text">A la imagen no es necesario hacerla fluida con img-fluid si le aplicamos card-img-top o card-img-bottom. Si la ubicamos por fuera del body de la card, ocupa el 100% de su ancho, si está adentro, el body limita ese ancho máximo. Si estando dentro del body no le aplicamos alguna clase para img de card, entonces sí va img-fluid.</p>
+                        <a href="#" class="btn btn-success">ver +</a>
+                    </div>
+                    <div class="card-footer text-white-50 bg-success">
+                        <p class="m-0">Card con pie de página.</p>
+                    </div>
+                </div> 
+            </div>
+                     
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md">
+               
+                <h2>Card con texto superpuesto a la imagen</h2>
+                
+                <!-- La clase card-img la hace fluida y con border-radius en las 4 esquinas. La clase card-img-overlay, superpone su contenido sobre la img (no hace falta aplicarle el card-body a ese div). -->
+
+                <div class="card">
+                    <img class="card-img" src="recursos/4.jpg" alt="imagen">
+                    <div class="card-img-overlay text-white text-center">
+                        <h3 class="card-title">Título Pastilla</h3>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex optio voluptate fugit consectetur repellendus nisi, nihil illum doloremque pariatur deleniti.</p>
+                    </div>
+                </div> 
+            </div>   
+            <div class="col-md">
+               
+                <h2>Grupo de cards</h2>
+                
+                <!-- Si encerramos varias cards dentro de un contenedor al que le aplicamos la clase card-group, las hacemos funcionar como una unidad de información, y sin importar la cantidad de contenido de cada una, todas van a crecer al alto del card con mayor contenido. -->
+
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="recursos/4.jpg" alt="imagen">
+                        <div class="card-body">
+                            <h3 class="card-title">Título Pastilla</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex optio voluptate.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="recursos/4.jpg" alt="imagen">
+                        <div class="card-body">
+                            <h3 class="card-title">Título Pastilla</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex optio voluptate fugit consectetur repellendus nisi, nihil illum doloremque pariatur deleniti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+
+        <div class="row mb-3 justify-content-center">
+            <div class="col-sm-8 col-md-7 col-lg-12">
+               
+                <h2>Con semántica</h2>
+                
+                <!-- No siempre tienen por qué ser divs nuestros cards, en el primer caso decidimos maquetarlos como lista y en el segundo como figure y figcaption.
+                
+                En la ul aplicamos p-0 ya que, por defecto, el framework les aplica un padding-left a las ul y ol que se lo quitamos con la clase para paddings de Bootstrap.
+            
+                También agregamos un margin en los 4 costados de los li para separar más los cards de lo que los separa, por default, cuando funcionan en grupo.
+            
+                Y a los títulos les aplicamos la clase h2 que las muestra con el tratamiento gráfico que el framework les aplica a ese nivel de títulos (aunque sigan siendo h3 por jerarquía de encabezados). 
+            
+                Como vemos en el cardgroup de arriba y en el de abajo, los cards se apilan solo en xs, por lo que en tamaños de viewport pequeños como sm y md, se generan columnas finitas y largas de texto y la adaptación no es buena. Para evitarlo le aplicamos a la ul (cardgroup) display flex desde xs (ya que no incluye infijo de medio) y flex direction en column para que se apilen desde xs (flex-column), luego cambiamos el valor a row, en este ejemplo, desde lg (flex-row), por lo que los cards vuelven a estar en línea uno al lado del otro.
+            
+                Además, agregamos el truco de tener un li vacío luego de los 2 primeros cards que solo hacemos visible en lg de este modo en ese tamaño de viewport se genera un "salto de línea" que los presenta 2 y 2 en vez de los 4 en línea. -->
+
+                <ul class="card-group p-0 d-flex flex-column flex-lg-row">
+                    <li class="card m-2">
+                        <img class="card-img-top" src="recursos/1.jpg" alt="imagen">
+                        <div class="card-body">
+                            <h3 class="card-title h2">Cardgroup con flex</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex optio voluptate.</p>
+                        </div>
+                    </li>
+                    <li class="card m-2">
+                        <img class="card-img-top" src="recursos/2.jpg" alt="imagen">
+                        <div class="card-body">
+                            <h3 class="card-title h2">Cardgroup con flex</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex optio voluptate fugit consectetur repellendus nisi, nihil illum doloremque pariatur deleniti.</p>
+                        </div>
+                    </li>
+                    <li class="d-none d-lg-block d-xl-none w-100"></li>
+                    <li class="card m-2">
+                        <img class="card-img-top" src="recursos/3.jpg" alt="imagen">
+                        <div class="card-body">
+                            <h3 class="card-title h2">Cardgroup con flex</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex optio voluptate fugit consectetur repellendus nisi, nihil illum doloremque pariatur deleniti.</p>
+                        </div>
+                    </li>
+                    <li class="card m-2">
+                        <img class="card-img-top" src="recursos/4.jpg" alt="imagen">
+                        <div class="card-body">
+                            <h3 class="card-title h2">Cardgroup con flex</h3>
+                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex optio voluptate fugit consectetur repellendus nisi, nihil illum doloremque pariatur deleniti.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md">
+
+                <!-- En este caso, eliminamos el borde de los cards y también el padding en el eje horizontal, también agregamos el margen en los 4 costados de la caja para separarlos más.
+                
+                En la img no aplicamos ninguna de las clases de card para imágenes sino que queremos que presenten los bordes redondeados en las 4 esquinas, para lo cual le aplicamos la clase rounded. También un margin-bottom para separar más la imagen del texto del figcaption. 
+            
+                En el figccaption eliminamos el padding (del card-body) para que ocupe el mismo ancho que la imagen y centramos el texto. -->
+                
+                <div class="card-group">
+                    <figure class="card m-2 px-0 border-0">
+                        <img class="rounded mb-2" src="recursos/4.jpg" alt="imagen">
+                        <figcaption class="card-body text-center p-0">
+                            <p class="card-text">Lorem ipsum dolor, sit amet consec adipisicing elit. Ex optio voluptate fugit consectetur repellendus nisi.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="card m-2 px-0 border-0">
+                        <img class="rounded mb-2" src="recursos/3.jpg" alt="imagen">
+                        <figcaption class="card-body text-center p-0">
+                            <p class="card-text">Lorem ipsum dolor, sit amet consec adipisicing elit. Ex optio voluptate fugit consectetur repellendus nisi.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="card m-2 px-0 border-0">
+                        <img class="rounded mb-2" src="recursos/2.jpg" alt="imagen">
+                        <figcaption class="card-body text-center p-0">
+                            <p class="card-text">Lorem ipsum dolor, sit amet consec adipisicing elit. Ex optio voluptate fugit consectetur repellendus nisi.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="card m-2 px-0 border-0">
+                        <img class="rounded mb-2" src="recursos/1.jpg" alt="imagen">
+                        <figcaption class="card-body text-center p-0">
+                            <p class="card-text">Lorem ipsum dolor, sit amet consec adipisicing elit. Ex optio voluptate fugit consectetur repellendus nisi.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>   
+        </div>
+    </section>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

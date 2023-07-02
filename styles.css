@@ -1,0 +1,51 @@
+#logo{
+    width: 40px;
+    height: 40px;
+    background: url("./img/reciclaje-logo-696x696.png");
+    text-indent: -900px;
+    overflow: hidden;
+}
+#home {
+    background: url(./img/fondo.jpg) center bottom no-repeat;
+  
+}
+
+#botella-card{
+    margin-right: 2rem;
+   margin-top:  1em;
+}
+.hongo{
+    width: 500px;
+    height: 300px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+.section-parrafos{
+    padding-top: 2em;
+}
+.parrafos{
+    margin-left: 2em;
+    margin-right: 32em;
+}
+#parrafo-foto{
+    display: flex;
+}
+#video{
+    align-items: center;
+}
+#reutiliza{
+    padding-top: 10px;
+}
+#info{
+    padding-top: 2em;
+    align-items: center
+}
+.video-container{
+    padding: 5rem;
+}
+.formulario{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}

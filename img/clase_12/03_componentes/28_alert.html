@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Componentes</h1>
+    </header>
+
+    <section class="container">
+        <div class="row">
+            <article class="col-md-6 borde">
+
+                <h2>Alert</h2>
+
+                <div class="alert alert-primary">
+                    <p>Los alerts son mensajes contextuales para información al usuario o para acciones que debe realizar. Reciben la clase alert para el formato y una clase alert-* donde el * es un color de Bootstrap.</p>
+                    <p>Colores: primary, secondary, success, dange, warning, info, light, dark.</p>
+                </div>
+                <div class="alert alert-secondary">
+                    <p>Los alerts son mensajes contextuales para información al usuario o para acciones que debe realizar. Reciben la clase alert para el formato y una clase alert-* donde el * es un color de Bootstrap.</p>
+                    <p>Colores: primary, secondary, success, dange, warning, info, light, dark.</p>
+                </div>
+                <div class="alert alert-success">
+                    <p>Los alerts son mensajes contextuales para información al usuario o para acciones que debe realizar. Reciben la clase alert para el formato y una clase alert-* donde el * es un color de Bootstrap.</p>
+                    <p>Colores: primary, secondary, success, dange, warning, info, light, dark.</p>
+                </div>
+                <div class="alert alert-warning">
+                    <p>Los alerts son mensajes contextuales para información al usuario o para acciones que debe realizar. Reciben la clase alert para el formato y una clase alert-* donde el * es un color de Bootstrap.</p>
+                    <p>Colores: primary, secondary, success, dange, warning, info, light, dark.</p>
+                </div>
+                <div class="alert alert-danger">
+                    <p>Los alerts son mensajes contextuales para información al usuario o para acciones que debe realizar. Reciben la clase alert para el formato y una clase alert-* donde el * es un color de Bootstrap.</p>
+                    <p>Colores: primary, secondary, success, dange, warning, info, light, dark.</p>
+                </div>
+                <div class="alert alert-info">
+                    <p>Los alerts son mensajes contextuales para información al usuario o para acciones que debe realizar. Reciben la clase alert para el formato y una clase alert-* donde el * es un color de Bootstrap.</p>
+                    <p>Colores: primary, secondary, success, dange, warning, info, light, dark.</p>
+                </div>
+                <div class="alert alert-light">
+                    <p>Los alerts son mensajes contextuales para información al usuario o para acciones que debe realizar. Reciben la clase alert para el formato y una clase alert-* donde el * es un color de Bootstrap.</p>
+                    <p>Colores: primary, secondary, success, dange, warning, info, light, dark.</p>
+                </div>
+                <div class="alert alert-dark">
+                    <p>Los alerts son mensajes contextuales para información al usuario o para acciones que debe realizar. Reciben la clase alert para el formato y una clase alert-* donde el * es un color de Bootstrap.</p>
+                    <p>Colores: primary, secondary, success, dange, warning, info, light, dark.</p>
+                </div>
+
+            </article>
+
+
+            <article class="col-md-6 borde">
+
+                <h2>Alert con vínculos</h2>
+
+                <div class="alert alert-primary">
+                    <p>Tenemos una clase especial para los vínculos que sean contenido del alert. <a href="#" class="alert-link">Vinculo de prueba</a>. Los alerts son mensajes contextuales para información al usuario o para acciones que debe realizar.</p>
+                </div>
+
+                <h2>Alert con Título</h2>
+
+                <div class="alert alert-danger">
+                    <h3 class="alert-heading">Título del alert</h3>
+                    <p>También tenemos una clase especial para los encabezados que pueda contener el alert, para llevarlo al formato adecuado de acuerdo al color elegido para el alert.</p>
+                </div>
+
+                <h2>Cerrar un alert</h2>
+
+                <!-- Además de las clases anteriores, le agregamos la clase alert-dismissible para habilitar su cierre, la clase fade para el efecto de salida y la clase show para que se muestre al cargar el html (si no se incluye no aparece). 
+                    
+                También le agregamos el attr role con valor alert. -->
+
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+
+                    <h3 class="alert-heading">Atención!!!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi est nemo tempore iure enim optio dolor nesciunt cum, repellat ipsam.</p>
+
+                    <!-- Botón de cierre clásico de Bootstrap con el attr data-bs-dismiss que le confiere la funcionalidad, la class btn-close para el formato, el attr type con valor button (rol de botón) y el aria-label como etiqueta para accesibilidad. -->
+
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Botón cerrar"></button>
+                </div>
+
+                <!-- Otro alert similar al anterior pero con la clase fixed-bottom agregada para ubicarlo con posicionamiento fijo en la parte inferior de la pantalla. -->
+
+                <div class="alert fondo6 alert-dismissible fade show fixed-bottom m-0" role="alert">
+                    <h3 class="alert-heading">Publicidad</h3>
+                    <p>Este componente también lo podemos usar para publicidad habitualmente ubicada debajo del header o en el bottom de la página y que el usuario lo pueda cerrar mediante un botón. Para ello, le aplicamos la clase fixed-bottom.</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Botón cerrar"></button>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

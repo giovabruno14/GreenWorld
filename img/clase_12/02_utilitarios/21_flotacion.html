@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Flotación</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 bg-secondary text-white mb-3">
+                <p>Se puede aplicar flotación left (start),  right (right) o none, a cualquier elemento en todos los tamaños de viewport o a partir de alguno en particular mediante el sufijo de medio.</p>
+            </div>
+            <div class="col-md border">
+                <p class="w-25 float-start bg-light">float start</p>
+                <p class="w-25 float-end bg-light">float end</p>
+            </div>
+            <div class="col-md border">
+                <p class="w-25 float-lg-start bg-light">float start</p>
+                <p class="w-25 float-lg-end bg-light">float end</p>
+                <p class="bg-success text-white">Como vemos los elementos que continúan se ubican por detrás de los elementos flotados y desplazan su contenido para evitar solapamientos con los elementos flotados. También vemos que la flotación sucede a partir de lg a diferencia de la primera columna donde no se agrega sufijo de medio y flotan en todos los tamaños. En la primer columna se puede ver que aunque todos los hijos del contenedor (col) se encuentren flotados de todos modos crece (está corregido ese problema que causa la flotación).</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md border">
+                <p class="w-25 float-lg-start bg-light">float start</p>
+                <p class="w-25 float-lg-end bg-light">float end</p>
+                <div class="w-100 d-none d-lg-block clearfix"></div>
+                <p class="bg-danger text-white">Para evitar el comportamiento anterior, agregamos un div vacío con la clase clearfix que limpia flotaciones. Ese div lo hacemos visible solo cuando lo necesitamos en lg.</p>
+            </div>
+            <div class="col-md border">
+                <div class="clearfix">
+                    <p class="w-25 float-lg-start bg-light">float sfloat-lg-start</p>
+                    <p class="w-25 float-lg-end bg-light">float end</p>
+                </div>
+                <p class="bg-info text-white">La segunda posibilidad es encerrar los elementos flotados dentro de un contenedor al que le aplicamos la clase clearfix para limpieza de flotación, obteniendo el mismo resultado.</p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

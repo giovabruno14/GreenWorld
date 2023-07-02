@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Componentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <!-- La clase navbar-expand-[tamaño] indica a partir de que tamaño de viewport se expande la barra y deja de verse como menú hamburguesa. La clase navbar-expand-lg que tiene aplicado este ejemplo hace que hasta md se muestre como hamburguesa y a partir de lg, expandida.
+
+    Como el resto de las clases del framework que incluyen el tamaño de viewport, si utilizamos la clase navbar-expand sin hacer referencia a ningún tamaño, la barra se muestra expandida desde xs. Y si directamente no se incluye esta clase, aparecerá el botón hamburguesa en todos los tamaños de viewport.
+        
+    La clases navbar-light y navbar-dark manejan el color del texto de la barra, es decir, su título y el texto de los botones. La particularidad que navbar-light no aplica color blanco o claro al texto y navbar-dark oscuro sino al revés (interpreta que si el navbar tiene fondo light o claro el texto lo necesita oscuro y viceversa).
+    
+    La clase bg-[color_bootstrap] aplica el color de fondo a la barra, aunque también podemos aplicarle una clase propia con el color de fondo deseado. --->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <!-- El contenido de la barra se debe incluir dentro de cualquier contenedor de Bootstrap, si usamos container-fluid ocupará el 100% del ancho del contenedor (el nav) en todos los tamaños de viewport. -->
+
+        <div class="container-fluid">
+
+            <!-- El vínculo con la clase navbar-brand funciona como título de la barra, se puede utilizar pero NUNCA debe reemplazar a la h1 del sitio. -->
+
+            <a class="navbar-brand" href="#">Bootstrap</a>
+
+            <!-- El botón hamburguesa. El atributo data-bs-target debe "apuntar" al id del div que contiene a la barra (ul>li>a). 
+            
+            El atributo data-bs-toggle determina la funcionalidad del botón hamburguesa (expandir o contraer la barra de navegación).
+
+            Los atributos aria-... son atributos html5 que están relacionados con la accesibilidad (lector de pantaalla para no videntes): 
+                - aria-controls: debe "apuntar" al id de la barra (informa su función, con qué parte del componente se relaciona).
+                - aria-expanded: informa si la parte del componente con la que se relaciona se encuentra expandido o no por default (valores true o false).
+                - aria-label: es como una especie de tooltip para no videntes, cuando el botón (o cualquier otro componente o parte del componente) no tiene texto que indique su función, se informa desde este atributo.
+            
+            El span vacío lo utiliza para mostrar el ícono de la hamburguesa (las 3 rayitas apiladas). -->
+
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#barra"
+                    aria-controls="barra" 
+                    aria-expanded="false" 
+                    aria-label="Botón hamburguesa">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Este es el div lleva el id al que apunta el botón hamburguesa (desde el attr data-bs-target) y es el encargado de colapsar la barra cuando está presente el botón hamburguesa. -->
+
+            <div class="collapse navbar-collapse" id="barra">
+
+                <!-- La barra de navegación, la ul recibe la clase navbar-nav, los li la clase nav-item y los vínculos la clase nav-link. -->
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+
+                        <!-- La clase active no es obligatoria ni necesaria siempre, sobre todo si se trabaja una landing page o una one page ya que es el que marca el botón como activo para indicarle al usuario la sección del sitio en la que estamos navegando (y en ese tipo de páginas hay un solo html).
+                        
+                        El atributo aria-current con valor page cumple la misma función que la clase active pero para los usuarios no videntes. -->
+
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Si bien el componente incluye un container-fluid, tenermos distintas maneras de incorporarlo si no queremos que ocupe el 100% del ancho del body tanto visualmente (el nav sin ancho y con color de fondo) como el componente completo.
+    
+    Limitamos solo el ancho de la barra modificando el container-fluid de su interior. -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra2" aria-controls="barra2" aria-expanded="false" aria-label="Botón hamburguesa">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="barra2">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quienes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Si la incluimos dentro de un header que tiene aplicada la clase container (o cualquier otro contenedor de Bootstrap), el nav no ocupa todo su ancho ya que respeta los paddings de su contenedor. -->
+    
+    <header class="container borde">
+
+        <h1>Componentes</h1>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <div class="container">
+                <a class="navbar-brand" href="#">Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra3" aria-controls="barra3" aria-expanded="false" aria-label="Botón hamburguesa">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="barra3">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Si le aplicamos la clase row al navbar, se monta sobre los paddings del header container y su propio container interno los recupera por lo que no tendrá un "doble padding" que genere desfasaje con el contenido que esté a continuación. -->
+
+    <header class="container borde">
+
+        <h1>Componentes</h1>
+
+        <nav class="row navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra4" aria-controls="barra4" aria-expanded="false" aria-label="Botón hamburguesa">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="barra4">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- También podemos tener el nav como col dentro de una row y, por ende, el container interno de la barra generará un "doble padding" para su contenido. 
+        
+    Para evitarlo le agregamos ese contenedor interno la clase g-0 (podría ser también p-0) que elimina sus propios paddings (y el de sus hijos si lo tuvieran), expresándose solo el padding de la col y quedando compensado con el resto del contenido de la página. -->
+    
+    <header class="container borde">
+
+        <h1>Componentes</h1>
+
+        <div class="row justify-content-center">
+            <nav class="col-lg-7 navbar navbar-expand-xl navbar-dark bg-secondary">
+                <div class="container-fluid g-0 bg-info">
+                    <a class="navbar-brand" href="#">Bootstrap</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barra5" aria-controls="barra4" aria-expanded="false" aria-label="Botón hamburguesa">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="barra5">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Quienes Somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

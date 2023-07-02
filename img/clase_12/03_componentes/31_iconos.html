@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        /* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"); */
+    </style>
+</head>
+
+<body>
+
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Iconos</h1>
+    </header>
+
+    <section class="container">
+        <h2>Iconos</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Bootstrap incorporó una biblioteca de íconos de código abierto, de alta calidad y gratuitos. Son más de 1500 íconos que pueden ser inplementados como imagen (svg) o como fuente.</p>
+                <p>Para hacerlo, nos dirigimos a la sección icons de la barra de navegación principal de la página oficial del framework y allí encontraremos las imágenes de los íconos a utilizar.</p>
+                <p>Cuenta también con un buscador donde podemos agregar una palabra y obtendremos un filtrado de los íconos que coinciden con ella.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Implementación como imagen</h3>
+                <ol>
+                    <li>Elegimos el ícono a inplementar en nuestro proyecto y le hacemos click sobre la imagen.</li>
+                    <li>Nos muestra en detalle el ícono, en la columna de la derecha nos dirigimos a la opción Copy HTML.</li>
+                    <li>Copiamos la etiqueta svg (o hacemos click en la casilla de verificación lo que produce su copia en el portapapeles) y lo pegamos en nuestro proyecto.</li>
+                    <li>Listo!!! ícono agregado.</li>
+                </ol>
+
+                <p>Como vemos, la etiqueta svg tiene aplicados los atributos width y height con valor 16 (px, claro). Por supuesto que se pueden cambiar, como hacemos en el último. Pero si no incluimos estos atributos (o los aplicamos desde css) el ícono toma todo el ancho disponible en su contenedor (como vemos en el primer ícono).</p>
+                <p>Para cambiarles el color simplemente basta con agregarlo en formato hexadecimal como valor del atributo fill.</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-alarm-fill" viewBox="0 0 16 16">
+                    <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffaa00" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffaaaa" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash" viewBox="0 0 16 16">
+                    <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z"/>
+                    <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
+                    <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-bluetooth" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m8.543 3.948 1.316 1.316L8.543 6.58V3.948Zm0 8.104 1.316-1.316L8.543 9.42v2.632Zm-1.41-4.043L4.275 5.133l.827-.827L7.377 6.58V1.128l4.137 4.136L8.787 8.01l2.745 2.745-4.136 4.137V9.42l-2.294 2.274-.827-.827L7.133 8.01ZM7.903 16c3.498 0 5.904-1.655 5.904-8.01 0-6.335-2.406-7.99-5.903-7.99C4.407 0 2 1.655 2 8.01 2 14.344 4.407 16 7.904 16Z"/>
+                  </svg>
+
+                  <p>También nos dá la opción de descargar el ícono (por encima de la opción anteriormente mencionada) e implementarlo como una imagen local.</p>
+                  <img src="recursos/wallet-fill.svg" alt="billetera" width="32" height="32">
+
+            </div>
+            <div class="col-md-6">
+                <h3>Implementación como fuente</h3>
+                <p>En la página inicial de la documentación de los íconos, justo por encima de las imágenes, encontraremos una barra de opciones. Allí hacemos click en Install y navegará ancla hasta donde se encuentra el contenido.</p>
+                <p>Podremos descargar el zip con todos los archivos de íconos y los archivos de fuente para aplicarlo, o accederlos desde el CDN de manera online.</p>
+                <p>Si Elegimos la segunda opción, podemos hacer click en la casilla de verificación donde se encuentra la etiqueta link para copiarla y luego pegarla en el head del html (como hacemos en este ejemplo), o en la de la regla @import para incorporarla en nuestro css (como ejemplo se incluye en el head la etiqueta style con la regla incorporada, por supuesto que lo mejor sería tener un archivo css y agregar la regla allí por encima de cualquier otra regla que contenga la hoja de estilos).</p>
+                <p>Por supuesto que solo hace falta incorporar una de las dos opciones ya que realizan lo mismo de distinta manera.</p>
+                <p>Por último, simplemente vamos al ícono que nos interesa y nos dirigimos, en la misma columna derecha antes mencionada, a la opción Icon font, clickeamos la casilla de verificación para copiar el código y lo pegamos dentro del contenedor de texto que queramos.</p>
+                <p>El tamaño y el color del ícono será el que tenga aplicado el texto, por lo que es muy fácil de personalizar.</p>
+
+                <h1><i class="bi bi-record-circle-fill"></i> En un título</h1>
+                <h2 class="text-success"><i class="bi bi-printer-fill"></i> En un título</h2>
+
+                <p>En un párrafo <i class="bi bi-question-square-fill"></i></p>
+                <p>En un párrafo <i class="bi bi-apple text-info"></i></p>
+
+                <p>En botones o barra de navegación.</p>
+
+                <a href="#" class="btn btn-danger btn-lg"><i class="bi bi-file-earmark-x"></i></a>
+
+                <ul class="nav fs-1">
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-instagram"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-facebook"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-twitter"></i></a></li>
+                </ul>
+            </div>
+    </section>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

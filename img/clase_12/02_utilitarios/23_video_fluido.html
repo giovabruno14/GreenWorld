@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Clases para videos</h1>
+    </header>
+
+    <section class="container">
+            <div class="row">
+                <div class="col-md">
+                
+                    <h2>Video Local 1x1</h2>
+                    
+                    <!-- Para hacer fluido al video sea local o con iframe (o cualquier otro método) necesitamos aplicarle AL CONTENEDOR DEL VIDEO (no al video mismo) dos clases: 
+                            - .ratio: establece las características generales del tamaño y posicionamiento de la caja contenedora del video, pero no le establece alto, por lo que si solo aplicamos esta clase el video no se ve.
+                            
+                            - .ratio-[*]: donde [*] establece el alto y, en definitiva, el tamaño de la caja que también será el del reproductor del video de acuerdo a su relación de aspecto (relación entre el ancho y alto del video). Las posibilidades de valores [*] son: 1x1, 4x3, 16x9 y 21x9. 
+                            
+                    El video nunca se deforma pero si se ajusta al ancho de la caja, al agregarle un color de fondo veremos si el video corresponde o no a la relación de aspecto de la caja contenedora (si vemos partes en negro es porque el video no lo llena, por lo que ese tamaño es diferente al de su fotograma). -->
+                    
+                    <div class="ratio ratio-1x1 bg-dark">
+                        <video src="recursos/video.mp4" controls></video>
+                    </div>
+                
+                </div>
+                <div class="col-md">
+                
+                    <h2>Video Local 4x3</h2>
+                    <div class="ratio ratio-4x3 bg-dark">
+                        <video src="recursos/video.mp4" controls></video>
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md">
+                
+                    <h2>Video Local 16x9</h2>
+                    <div class="ratio ratio-16x9 bg-dark">
+                        <video src="recursos/video.mp4" controls></video>
+                    </div>
+                
+                </div>
+                <div class="col-md">
+                
+                    <h2>Video Local 21x9</h2>
+                    <div class="ratio ratio-21x9 bg-dark">
+                        <video src="recursos/video.mp4" controls></video>
+                    </div>
+                
+                </div>
+            </div>
+            
+
+            <div class="row">
+                <div class="col-md">
+                
+                    <h2>YouTube 1x1</h2>
+                    <div class="ratio ratio-1x1 bg-dark">
+                        <iframe width="720" height="405" src="https://www.youtube.com/embed/DItC4_dwrMs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                
+                </div>
+                <div class="col-md">
+                
+                    <h2>YouTube 4x3</h2>
+                    <div class="ratio ratio-4x3 bg-dark">
+                        <iframe width="720" height="405" src="https://www.youtube.com/embed/DItC4_dwrMs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                
+                    <h2>YouTube 16x9</h2>
+                    <div class="ratio ratio-16x9 bg-dark">
+                        <iframe width="720" height="405" src="https://www.youtube.com/embed/DItC4_dwrMs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                
+                </div>
+                <div class="col-md">
+                
+                    <h2>YouTube 21x9</h2>
+                    <div class="ratio ratio-21x9 bg-dark">
+                        <iframe width="720" height="405" src="https://www.youtube.com/embed/DItC4_dwrMs" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                
+                </div>
+            </div>
+    </section>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Componentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Componentes</h1>
+    </header>
+
+    <section class="container">
+        <div class="row justify-content-center">
+           
+            <div class="col-md border m-1">
+               
+                <!-- Para formatear botones tenemos que aplicarles dos clases: btn genera el formato general y btn-[color] le da el color al botón en reposo y en los diferentes estados. -->
+                
+                <h2>Botones plenos</h2>
+                <a href="#" class="btn btn-primary my-1">botón primary</a>
+                <a href="#" class="btn btn-secondary my-1">botón secondary</a>
+                <a href="#" class="btn btn-success my-1">botón success</a>
+                <a href="#" class="btn btn-danger my-1">botón danger</a>
+                <a href="#" class="btn btn-warning my-1">botón warning</a>
+                <a href="#" class="btn btn-info my-1">botón info</a>
+                <a href="#" class="btn btn-light my-1">botón light</a>
+                <a href="#" class="btn btn-dark my-1">botón dark</a>
+                <a href="#" class="btn btn-link my-1">vínculo</a>
+                <input type="button" value="botón vínculo" class="btn btn-link">
+                
+            </div>
+            <div class="col-md border m-1">
+               
+                <!-- La clase btn-outline-[color] genera un botón contorneado en vez de relleno (se rellena en el hover). -->
+               
+                <h2>Botones contorno</h2>
+                <a href="#" class="btn btn-outline-primary my-1">botón primary</a>
+                <a href="#" class="btn btn-outline-secondary my-1">botón secondary</a>
+                <a href="#" class="btn btn-outline-success my-1">botón success</a>
+                <a href="#" class="btn btn-outline-danger my-1">botón danger</a>
+                <a href="#" class="btn btn-outline-warning my-1">botón warning</a>
+                <a href="#" class="btn btn-outline-info my-1">botón info</a>
+                <a href="#" class="btn btn-outline-light my-1">botón light</a>
+                <a href="#" class="btn btn-outline-dark my-1">botón dark</a>
+                
+            </div>
+            <div class="d-block w-100"></div>
+            <div class="col-md-8 border m-1">
+              
+                <!-- El botón tiene, por defecto, un tamaño medio, luego tenemos dos clases para agrandarlo o achicarlo. 
+                    
+                No confundir los sufijos lg y sm de estas clases con los tamaños de viewport de las col, por ejemplo, estas hacen referencia al tamaño del botón y no del viewport. 
+                
+                También tenemos otra clase para hacerlo trabajar en bloque ya que, por defecto, lo hacen inline-block. -->
+               
+                <h2>Tamaño botones</h2>
+                <a href="#" class="btn btn-primary btn-lg">botón grande</a>
+                <a href="#" class="btn btn-primary">botón medio (default)</a>
+                <a href="#" class="btn btn-primary btn-sm">botón pequeño</a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

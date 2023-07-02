@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="container fondo3 p-3 mb-3">
+        <h1>Salto de línea con ancho y display</h1>
+    </header>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-3 fondo6">
+                <p>Si incluimos un div vacío entre las columnas, al que le aplicamos la clase w-100, se produce un salto de línea más allá que los elementos de la fila sumen 12 cols, ya que el div vacío ocupa el 100% del ancho pero no se visualiza por no tener contenido.</p>
+
+                <p>En este caso lo aplicamos en todos los tamaños de dispositivos ya que es existe siempre.</p>
+            </div>
+
+            <div class="col-3 fondo2">
+                <p>col-3</p>
+            </div>
+
+            <!-- div vacío con 100% de ancho, produce el salto de línea -->
+
+            <div class="w-100"></div>
+
+            <div class="col-3 fondo3">
+                <p>col-3</p>
+            </div>
+
+            <div class="col-3 fondo4">
+                <p>col-3</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md fondo4">
+                <p>Ahora como la clase aplicada es col-md los elementos se apilan con un ancho de 12 cols en xs y sm, y se alínean en md ocupando 3 cols cada una por su ancho automático, pero al div vacío con w-100 lo hacemos visible a partir de xl para que produzca el salto desde allí en adelante, agregándole la clase que aplica la propiedad display con valor none.</p> 
+                
+                <p>De esta manera evitamos tener que aplicarle a todos los elementos la clase col-xl-6 para obtener la misma maquetación.</p>
+            </div>
+
+            <div class="col-md fondo2">
+                <p>col-md</p>
+            </div>
+            
+            <!-- El div es ocultado en todos los tamaños y se hace de bloque en xl para que produzca el salto a partir de ese tamaño en adelante. -->
+            
+            <div class="w-100 d-none d-xl-block"></div>
+            
+            <div class="col-md fondo3">
+                <p>col-md</p>
+            </div>
+
+            <div class="col-md fondo4">
+                <p>col-md</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

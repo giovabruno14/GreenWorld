@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="container p-3 fondo3">
+        <h1>Componentes</h1>
+    </header>
+
+    <!-- Si lo incluimos dentro de un container (de cualquier tipo), tomará el ancho del contenido, sin incluir los paddings laterales.
+    
+    Para evitarlo y que quede apilado con el bloque anterior y el siguiente podemos quitárselos con p-0 o g-0. -->
+
+    <div class="container p-0">
+        <div id="galeria" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- También podemos personalizar las etiquetas de estructura de la galería, en este caso mediante una lista, solo corregimos el padding que le agrega a las ul el framework pasándolo a cero con la clase de Bootstrap p-0 (sobre la ul).
+            
+            Aprovechamos para probar también que al incluir la etiqueta picture para hacer la img responsive el carousel sigue funcionando sin problemas. No es necesario tener una versión de cada img para cada tamaño de viewport que generan los break points del framework, como vemos, en este caso y solo como ejemplo, se incluyó una única img para mobile. -->
+
+            <ul class="carousel-inner p-0">
+                <li class="carousel-item active">
+                    <picture>
+                        <source media="(max-width: 991px" srcset="recursos/1_m.jpg">
+                        <img class="d-block w-100" src="recursos/1.jpg" alt="imagen">
+                    </picture>
+                </li>
+                <li class="carousel-item">
+                    <picture>
+                        <source media="(max-width: 991px" srcset="recursos/2_m.jpg">
+                        <img class="d-block w-100" src="recursos/2.jpg" alt="imagen">
+                    </picture>
+                </li>
+                <li class="carousel-item">
+                    <picture>
+                        <source media="(max-width: 991px" srcset="recursos/3_m.jpg">
+                        <img class="d-block w-100" src="recursos/3.jpg" alt="imagen">
+                    </picture>
+                </li>
+                <li class="carousel-item">
+                    <picture>
+                        <source media="(max-width: 991px" srcset="recursos/4_m.jpg">
+                        <img class="d-block w-100" src="recursos/4.jpg" alt="imagen">
+                    </picture>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <section class="container">
+        <div class="row">
+            <article class="col-md">
+                <h2>Título del artículo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+            </article>
+            <article class="col-md">
+                <h2>Título del artículo</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error autem repudiandae, amet distinctio laborum odit illum facilis, pariatur non sed in blanditiis! Consequatur ipsum rerum, sunt voluptate magni debitis deserunt?</p>
+            </article>
+        </div>
+    </section>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
